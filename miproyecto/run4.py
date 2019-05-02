@@ -10,25 +10,54 @@ a distancia el numero de ciclos a seguir es de 10 caso contrario
 debera seguir 8 ciclos. Obtener la proyeccion del costo
 de la carrera de un estudiante
 
-
-
-casos: distancia-18 
-       presencial-22
-
 """
 
+# variables
+ciclo = 1200
+seguroUno = 100
+seguroDos = 150
+costoCarrera = 0
 
-edad = input("Ingrese su edad: ")
-edad = int (edad)
+# ingreso de datos
 modalidad = input("Seleccione su modalidad: \n1.Presencial \n2.Distancia: ")
 modalidad = int (modalidad)
 
-if edad <= 20:
-	valor = 100
+edad = input("Ingrese su edad:")
+edad = int (edad)
+
+
+# cálculos
+if (modalidad == 1) and (edad <= 20 ):
+	costoCarrera = (seguroUno * 8) + (ciclo * 8)
+	print ("El costo de su carrera es: %d" % (costoCarrera))
 else:
-	valor = 150
-	if modalidad = 1:
-		ciclos = 8
+	if (modalidad == 1) and (edad > 20 ):
+		costoCarrera = (seguroDos * 8) + (ciclo * 8)
+		print ("El costo de su carrera es: %d" % (costoCarrera))
+	else:
+		if (modalidad == 2) and (edad <= 20 ):
+			costoCarrera = (seguroUno * 10) + (ciclo * 10)
+			print ("El costo de su carrera es: %d" % (costoCarrera))
+		else:
+			if (modalidad == 2) and (edad > 20):
+				costoCarrera = (seguroDos * 10) + (ciclo * 10)
+				print ("El costo de su carrera es: %d" % (costoCarrera))
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
 	
 
 
